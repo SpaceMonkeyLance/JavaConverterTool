@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ConverterToolPackage.webservices" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ConverterToolPackage.webservices" xmlns:intf="http://ConverterToolPackage.webservices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ConverterToolPackage.webservices" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="convertPoundsToKilograms">
+    <complexType>
+     <sequence>
+      <element name="poundValue" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertPoundsToKilogramsResponse">
+    <complexType>
+     <sequence>
+      <element name="convertPoundsToKilogramsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertMilesToKilometers">
+    <complexType>
+     <sequence>
+      <element name="milesValue" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertMilesToKilometersResponse">
+    <complexType>
+     <sequence>
+      <element name="convertMilesToKilometersReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertKelvinToCelcius">
+    <complexType>
+     <sequence>
+      <element name="kelvinValue" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertKelvinToCelciusResponse">
+    <complexType>
+     <sequence>
+      <element name="convertKelvinToCelciusReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="convertPoundsToKilogramsRequest">
+
+      <wsdl:part element="impl:convertPoundsToKilograms" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="convertKelvinToCelciusRequest">
+
+      <wsdl:part element="impl:convertKelvinToCelcius" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="convertPoundsToKilogramsResponse">
+
+      <wsdl:part element="impl:convertPoundsToKilogramsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="convertMilesToKilometersResponse">
+
+      <wsdl:part element="impl:convertMilesToKilometersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="convertMilesToKilometersRequest">
+
+      <wsdl:part element="impl:convertMilesToKilometers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="convertKelvinToCelciusResponse">
+
+      <wsdl:part element="impl:convertKelvinToCelciusResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Converter">
+
+      <wsdl:operation name="convertPoundsToKilograms">
+
+         <wsdl:input message="impl:convertPoundsToKilogramsRequest" name="convertPoundsToKilogramsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:convertPoundsToKilogramsResponse" name="convertPoundsToKilogramsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="convertMilesToKilometers">
+
+         <wsdl:input message="impl:convertMilesToKilometersRequest" name="convertMilesToKilometersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:convertMilesToKilometersResponse" name="convertMilesToKilometersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="convertKelvinToCelcius">
+
+         <wsdl:input message="impl:convertKelvinToCelciusRequest" name="convertKelvinToCelciusRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:convertKelvinToCelciusResponse" name="convertKelvinToCelciusResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ConverterSoapBinding" type="impl:Converter">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="convertPoundsToKilograms">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="convertPoundsToKilogramsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="convertPoundsToKilogramsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="convertMilesToKilometers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="convertMilesToKilometersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="convertMilesToKilometersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="convertKelvinToCelcius">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="convertKelvinToCelciusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="convertKelvinToCelciusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ConverterService">
+
+      <wsdl:port binding="impl:ConverterSoapBinding" name="Converter">
+
+         <wsdlsoap:address location="http://localhost:8080/JavaConverterTool/services/Converter"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
